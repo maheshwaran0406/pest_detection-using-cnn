@@ -1,0 +1,29 @@
+Title:
+Pest Detection Using Convolutional Neural Networks (CNNs)
+
+Description:
+This project involves developing a Convolutional Neural Network (CNN) model to automatically classify images of pests into different categories. The pipeline consists of several key components:
+
+Data Preparation:
+
+Dataset: The dataset comprises images of pests stored in a directory. The images are divided into training and validation sets using an ImageDataGenerator for data augmentation and rescaling.
+Image Augmentation: To improve the model's performance and generalization, techniques like shear, zoom, and horizontal flipping are applied to the training images.
+Model Building:
+
+Architecture: The model is built using Keras' Sequential API with multiple convolutional layers, max-pooling layers, and dense layers. The architecture includes:
+Three Convolutional layers (Conv2D) to extract features from images.
+Three Max-Pooling layers (MaxPooling2D) to reduce the spatial dimensions.
+A Flatten layer to convert the 2D feature maps into a 1D vector.
+Dense layers for classification, with dropout used to prevent overfitting.
+Compilation: The model uses categorical cross-entropy loss and the Adam optimizer.
+Training:
+
+The model is trained for 50 epochs with training and validation data generators. The performance metrics (accuracy) are monitored throughout the training process.
+Evaluation and Prediction:
+
+Model Saving and Loading: After training, the model is saved to a file for future use. It can be loaded to make predictions on new images.
+Image Prediction: A function predict_image is defined to process and classify new images. It preprocesses the image, runs it through the model, and outputs the predicted class.
+Example Usage:
+
+The project includes an example of predicting the class of a new pest image using the trained model. The prediction results are printed, showing which pest category the image belongs to.
+This project demonstrates the practical application of CNNs for image classification tasks and can be extended to various pest detection and management scenarios.
